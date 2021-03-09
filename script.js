@@ -5,9 +5,9 @@ function randn_bm() {
   return Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v) * 2 | 0; 
 };
 
-function createGaussObject() {
+function createGaussObject(num) {
   let obj = {};
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < num; i++) {
     let temp = randn_bm();
     if (obj.hasOwnProperty(temp)) {
       obj[temp]++;
@@ -27,4 +27,4 @@ function createGaussObject() {
   }
 }
 
-createGaussObject();
+createGaussObject(5);
