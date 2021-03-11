@@ -6,7 +6,7 @@ function randn_bm() {
 };
 
 function createGaussObject(num) {
-  let obj = {};
+  const obj = {};
   for (let i = 0; i < num; i++) {
     let temp = randn_bm();
     if (obj.hasOwnProperty(temp)) {
